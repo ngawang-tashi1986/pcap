@@ -1,0 +1,20 @@
+General HTTP Request Filtering:
+http.request: This filter displays all packets that are identified as HTTP requests by Wireshark.
+Filtering by HTTP Method:
+http.request.method == "GET": Filters for HTTP GET requests.
+http.request.method == "POST": Filters for HTTP POST requests.
+http.request.method == "OPTIONS": Filters for HTTP OPTIONS requests.
+Replace "GET", "POST", or "OPTIONS" with any other standard HTTP method (e.g., "HEAD", "PUT", "DELETE", "TRACE", "CONNECT") to filter by that specific method.
+Filtering by Request URI:
+http.request.uri contains "/path/to/resource": Filters for requests where the URI contains a specific string.
+http.request.uri == "/index.html": Filters for requests targeting a specific URI exactly.
+Filtering by Host Header:
+http.host == "www.example.com": Filters for requests sent to a specific host.
+Combining Filters:
+Logical operators like and, or, and not can be used to combine multiple filter conditions.
+http.request and http.host == "www.example.com": Filters for all HTTP requests directed to "www.example.com".
+http.request.method == "POST" or http.request.method == "PUT": Filters for either POST or PUT requests.
+Filtering for HTTP over Specific Ports:
+While http.request generally handles standard HTTP ports, if HTTP traffic is running on a non-standard port (e.g., not 80), you might need to combine with a TCP port filter:
+tcp.port == 8080 and http.request: Filters for HTTP requests on port 8080.
+These filters are entered into the "Apply a display filter..." bar in the Wireshark interface.
