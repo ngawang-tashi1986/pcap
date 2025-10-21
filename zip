@@ -1,1 +1,6 @@
 tar -xvjf archive.tar.bz2
+
+
+
+
+View -> Preferences -> Select Protocol -> Select TLS -> And browse .log file 
