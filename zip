@@ -7,3 +7,10 @@ View -> Preferences -> Select Protocol -> Select TLS -> And browse .log file
 
 http.request.method == "GET" and http.request.uri contains "640x440_DRIVE.jpg" 
 
+aircrack-ng -e SSID -w leaked_password_list_clean.txt filename.pcap
+aircrack-ng -e Eggtopia134321 -w leaked_password_list_clean.txt eggtopia_anon_practice.pcap
+
+http.request.method == "GET" && http.request.uri contains "common.css"
+
+wpa-pwd:theFoundPassphrase:theSSID
+wpa-pwd:drpepperdrinker:Eggtopia134321
