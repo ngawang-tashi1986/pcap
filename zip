@@ -1,6 +1,10 @@
 tar -xvjf archive.tar.bz2
+sudo bunzip2 eggtopia_anon_practice.pcap.bz2
 
 
 
+sudo apt install -y aircrack-ng 
 
-View -> Preferences -> Select Protocol -> Select TLS -> And browse .log file 
+View -> Preferences -> Select Protocol -> Select TLS -> And browse .log file
+
+http.request.method == "GET" and http.request.uri contains "640x440_DRIVE.jpg" 
